@@ -1,0 +1,14 @@
+
+CREATE TABLE persoane (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nume VARCHAR(45),
+    varsta INT
+);
+
+CREATE TABLE excursii (
+    id_persoana INT,
+    id_excursie INT AUTO_INCREMENT PRIMARY KEY,
+    destinatia VARCHAR(45),
+    anul INT,
+    FOREIGN KEY (id_persoana) REFERENCES persoane(id)
+);
